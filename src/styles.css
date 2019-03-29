@@ -1,3 +1,22 @@
 #results {
   display: none;
 }
+
+table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#userSearchForm {
+  text-align: center;
+  margin-top: 20px;
+}

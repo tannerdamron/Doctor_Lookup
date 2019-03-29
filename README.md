@@ -5,14 +5,12 @@
 This web application will let a user search by ailment and a list of doctor's in portland that can treat that ailment will show. This web application will also allow users to search by doctor name and find that specific doctor's information in Portland.
 
 ## Specifications
-* User can enter ailment in search bar and a list of doctors will show up
+* User can enter ailment in search bar and a list of doctors will show up with all doctor information
 * > Input: "sore throat"
-* > Output: "Jimmy John, MD.
-* > Washington Square Park Dental. 1719 Powell St Portland, OR 94133"
+* > Output: "John Lee	325 9th Ave. Seattle, Washington	2065205000	No website	Yes"
 * User can enter doctor name in search bar and a that doctor will show up
-* > Input: "Jimmy John"
-* > Output: "Jimmy John, MD.
-* > Washington Square Park Dental. 1719 Powell St Portland, OR 94133"
+* > Input: "John Lee"
+* > Output: "John Lee	325 9th Ave. Seattle, Washington	2065205000	No website	Yes"
 
 ### Setup Instructions
 Download Node.js
@@ -23,7 +21,7 @@ Download Node.js
 * You must add personal API key to a .env file:
 * > Go to "https://developer.betterdoctor.com" and sign up to get unique API key
 > * Create .env file in root directory
-> * Add "apiKey=(unique api key)" in the .env file and save
+> * Add "exports.apiKey=(unique api key)" in the .env file and save
 * To run application:
 * > Navigate to root directory in terminal
 * > Run the command "$ npm install" to install all dependencies in the package.JSON file
