@@ -3,7 +3,7 @@ export default class userSearch {
     this.ailment = ailment;
     this.doctorName = doctorName;
     this.uniqueApiKey = process.env.apiKey;
-    this.url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.doctorName}&query=${this.ailment}&location=or-portland&limit=50&user_key=${this.uniqueApiKey}`;
+    this.url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.doctorName}&query=${this.ailment}&location=wa-seattle&limit=50&user_key=${this.uniqueApiKey}`;
   }
 
   doctorSearch() {
