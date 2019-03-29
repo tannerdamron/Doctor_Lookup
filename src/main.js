@@ -5,24 +5,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(document).ready(function () {
-  $('#userSearchForm').submit(function(e) {
+  $('#userSearchForm').submit(function (e) {
     e.preventDefault();
     $('#noResults').hide();
     let ailment = $('#ailment').val();
     let doctorName = $('#doctorName').val();
     let location = $('#location').val();
+    $('.hidden').show();
     let newPatients = "";
     let website = "";
     let userInput = new userSearch(ailment, doctorName, location);
     let promiseTwo = userInput.geocodeLocation(location);
-    let latLong;
-    location = promiseTwo.then(function (response) {
+    promiseTwo.then(function (response) {
       let body = JSON.parse(response);
-      latLong = `${body.results[0].locations[0].latLng.lat},${body.results[0].locations[0].latLng.lng}`;
+      $('#latitudeLongitude').text(`${body.results[0].locations[0].latLng.lat},${body.results[0].locations[0].latLng.lng}`);
     });
-    console.log(latLong);
-    location = latLong;
-    console.log(location);
     let promise = userInput.doctorSearch();
     promise.then(function (response) {
       let body = JSON.parse(response);
