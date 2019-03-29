@@ -10,9 +10,10 @@ $(document).ready(function () {
     $('#noResults').hide();
     let ailment = $('#ailment').val();
     let doctorName = $('#doctorName').val();
+    let location = $('#location').val();
     let newPatients = "";
     let website = "";
-    let userInput = new userSearch(ailment, doctorName);
+    let userInput = new userSearch(ailment, doctorName, location);
     let promise = userInput.doctorSearch();
     promise.then(function (response) {
       let body = JSON.parse(response);

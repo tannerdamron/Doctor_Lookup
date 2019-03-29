@@ -1,9 +1,10 @@
 export default class userSearch {
-  constructor(ailment, doctorName) {
+  constructor(ailment, doctorName, location) {
     this.ailment = ailment;
     this.doctorName = doctorName;
+    this.location = location;
     this.uniqueApiKey = process.env.apiKey;
-    this.url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.doctorName}&query=${this.ailment}&location=wa-seattle&limit=50&user_key=${this.uniqueApiKey}`;
+    this.url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.doctorName}&query=${this.ailment}&location=${location}&limit=200&user_key=${this.uniqueApiKey}`;
   }
 
   doctorSearch() {
