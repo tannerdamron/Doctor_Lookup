@@ -9,17 +9,19 @@
 <body>
   <h1>Search doctors in Portland, Oregon by name or ailment</h1>
   <form id="userSearchForm">
+    <label for="doctorName">Search by doctor name</label>
     <input id="doctorName" type="text">
+    <label for="ailment">Search by ailment</label>
     <input id="ailment" type="text">
     <button type="submit">Search</button>
   </form>
   <h1 class="showErrors"></h1>
   <div id="results">
-    <h2 id="resultDoctorName"></h2>
-    <h2 id="resultDoctorAddress"></h2>
-    <h2 id="resultDoctorPhoneNumber"></h2>
-    <h2 id="resultDoctorWebsite"></h2>
-    <h2 id="resultDoctorNewPatients"></h2>
+    <h2>Doctor Name: <span id="resultDoctorName"></span></h2>
+    <h2>Address: <span id="resultDoctorAddress"></span></h2>
+    <h2>Phone Number: <span id="resultDoctorPhoneNumber"></span></h2>
+    <h2>Website: <span id="resultDoctorWebsite"></span></h2>
+    <h2>Accepting new patients: <span id="resultDoctorNewPatients"></span></h2>
   </div>
 </body>
 </html>
