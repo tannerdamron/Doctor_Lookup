@@ -14,6 +14,15 @@ $(document).ready(function () {
     let newPatients = "";
     let website = "";
     let userInput = new userSearch(ailment, doctorName, location);
+    let promiseTwo = userInput.geocodeLocation(location);
+    let latLong;
+    location = promiseTwo.then(function (response) {
+      let body = JSON.parse(response);
+      latLong = `${body.results[0].locations[0].latLng.lat},${body.results[0].locations[0].latLng.lng}`;
+    });
+    console.log(latLong);
+    location = latLong;
+    console.log(location);
     let promise = userInput.doctorSearch();
     promise.then(function (response) {
       let body = JSON.parse(response);
