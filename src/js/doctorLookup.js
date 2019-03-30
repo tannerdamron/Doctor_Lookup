@@ -3,8 +3,8 @@ export default class userSearch {
     this.ailment = ailment;
     this.doctorName = doctorName;
     this.location = location;
-    this.apiKey = process.env.apiKey;
-    this.mapKey = process.env.mapKey;
+    this.apiKey = process.env.exports.apiKey;
+    this.mapKey = process.env.exports.mapKey;
     this.url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.doctorName}&query=${this.ailment}&location=${location}&limit=200&user_key=${this.apiKey}`;
   }
 
