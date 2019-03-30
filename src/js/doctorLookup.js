@@ -3,14 +3,15 @@ export default class userSearch {
     this.ailment = ailment;
     this.doctorName = doctorName;
     this.location = location;
-    this.uniqueApiKey = process.env.apiKey;
-    this.url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.doctorName}&query=${this.ailment}&location=${location}&limit=200&user_key=${this.uniqueApiKey}`;
+    this.apiKey = process.env.apiKey;
+    this.mapKey = process.env.mapKey;
+    this.url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${this.doctorName}&query=${this.ailment}&location=${location}&limit=200&user_key=${this.apiKey}`;
   }
 
   geocodeLocation(location) {
     return new Promise((resolve, reject) => {
       location = this.location;
-      this.geocodeUrl = `https://www.mapquestapi.com/geocoding/v1/address?key=VRnAyFmEKaAp966P5GvWnVRuR6KVkCsi&inFormat=kvp&outFormat=json&location=${location}&thumbMaps=false`;
+      this.geocodeUrl = `https://www.mapquestapi.com/geocoding/v1/address?key=${this.mapKey}&inFormat=kvp&outFormat=json&location=${location}&thumbMaps=false`;
       let request = new XMLHttpRequest();
       request.onload = function () {
         if (this.status === 200) {
