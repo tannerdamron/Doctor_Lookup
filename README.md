@@ -11,8 +11,8 @@ This web application will let a user search by ailment and a list of doctor's th
 * User can enter doctor name in search bar and that doctor will show up
 * > Input: "John Lee"
 * > Output: "John Lee	325 9th Ave. Seattle, Washington	2065205000	No website	Yes"
-* User can enter location in search bar and doctors in that location will show up
-* > Input: "wa-seattle"
+* User can enter city in search bar and doctors within 50 miles of that location will show up
+* > Input: "seattle"
 * > Output: "John Lee	325 9th Ave. Seattle, Washington	2065205000	No website	Yes"
 
 ### Setup Instructions
@@ -35,7 +35,7 @@ Download Node.js
 * > Run the command "npm run test"
 
 ### Known Bugs
-* Latitude and Longitude search doesn't work correctly
+* Some state searches will return weird latitude and longitude resulting in not a perfect search
 
 ### Languages/Libraries Used
 * HTML
