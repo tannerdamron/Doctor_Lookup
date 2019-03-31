@@ -11,8 +11,8 @@ This web application will let a user search by ailment and a list of doctor's th
 * User can enter doctor name in search bar and that doctor will show up
 * > Input: "John Lee"
 * > Output: "John Lee	325 9th Ave. Seattle, Washington	2065205000	No website	Yes"
-* User can enter city in search bar and doctors within 50 miles of that location will show up
-* > Input: "seattle"
+* User can enter city, state, or address in search bar and doctors within 50 miles of that location will show up
+* > Input: "seattle" or "seattle, wa" or "1402 3rd Ave Suite 505, Seattle, WA 98101"
 * > Output: "John Lee	325 9th Ave. Seattle, Washington	2065205000	No website	Yes"
 
 ### Setup Instructions
@@ -21,10 +21,13 @@ Download Node.js
 * Clone repository
 * Add it to your desktop using "git clone "https://github.com/tannerdamron/Doctor_Lookup"
 * Open in preferred text editor to see all code used
-* You must add personal API key to a .env file:
-* > Go to "https://developer.betterdoctor.com" and sign up to get unique API key
-> * Create .env file in root directory
-> * Add "exports.apiKey=(unique api key)" in the .env file and save
+* You must add personal API keys to a .env file:
+* Go to "https://developer.betterdoctor.com" and sign up to get unique API key
+* Go to "https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register" and sign up to get unique API key
+* > Create .env file in root directory
+* > Add both API keys to .env file like this:
+* > exports.apiKey=(unique betterdoctor API key)
+* > exports.mapKey=(unique mapquest API key)
 * To run application:
 * > Navigate to root directory in terminal
 * > Run the command "$ npm install" to install all dependencies in the package.JSON file
